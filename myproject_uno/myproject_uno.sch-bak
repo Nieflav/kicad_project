@@ -1,15 +1,15 @@
 EESchema Schematic File Version 4
-LIBS:Arduino_As_Uno-cache
-EELAYER 26 0
+LIBS:myproject_uno-cache
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "Projet AIME"
 Date "lun. 30 mars 2015"
 Rev ""
 Comp ""
-Comment1 ""
+Comment1 "Flavien Guillard"
 Comment2 ""
 Comment3 ""
 Comment4 ""
