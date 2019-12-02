@@ -449,17 +449,6 @@ F 3 "~" H 1850 3050 50  0001 C CNN
 	1    1850 3050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R Rsensor1
-U 1 1 5DD74673
-P 1850 2600
-F 0 "Rsensor1" H 1920 2646 50  0000 L CNN
-F 1 "R" H 1920 2555 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-5-4" V 1780 2600 50  0001 C CNN
-F 3 "~" H 1850 2600 50  0001 C CNN
-	1    1850 2600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1850 3200 1850 3400
 Wire Wire Line
@@ -502,7 +491,7 @@ F 3 "" H 2150 1450 50  0001 C CNN
 	1    2150 1450
 	-1   0    0    1   
 $EndComp
-Text GLabel 8900 2500 0    50   Input ~ 0
+Text GLabel 8900 2700 0    50   Input ~ 0
 ANxArduino
 Wire Wire Line
 	3250 3250 3400 3250
@@ -718,15 +707,11 @@ Wire Wire Line
 Wire Wire Line
 	4100 2150 3700 2150
 Connection ~ 3700 2150
-NoConn ~ 10550 2000
 NoConn ~ 10550 2100
 NoConn ~ 10550 2500
 NoConn ~ 10550 2600
-NoConn ~ 10550 2700
 NoConn ~ 10550 2900
 NoConn ~ 10550 3000
-NoConn ~ 8900 2600
-NoConn ~ 8900 2700
 NoConn ~ 8900 2800
 NoConn ~ 10550 1600
 NoConn ~ 9350 1450
@@ -773,19 +758,6 @@ Wire Wire Line
 	1950 6850 750  6850
 Wire Wire Line
 	2300 7050 2150 7050
-$Comp
-L power:+3.3V #PWR0108
-U 1 1 5DE86B9F
-P 1850 1450
-F 0 "#PWR0108" H 1850 1300 50  0001 C CNN
-F 1 "+3.3V" H 1865 1623 50  0000 C CNN
-F 2 "" H 1850 1450 50  0001 C CNN
-F 3 "" H 1850 1450 50  0001 C CNN
-	1    1850 1450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1850 1450 1850 2450
 Wire Wire Line
 	750  5550 750  6850
 NoConn ~ 2300 5850
@@ -911,4 +883,100 @@ NoConn ~ 10550 1200
 NoConn ~ 10550 1300
 NoConn ~ 8900 2900
 NoConn ~ 8900 3000
+$Comp
+L MYLIB:GazSensor U4
+U 1 1 5DE52639
+P 1000 2450
+F 0 "U4" H 1100 2725 50  0000 C CNN
+F 1 "GazSensor" H 1100 2634 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-5-10" H 1100 2600 50  0001 C CNN
+F 3 "" H 1000 2500 50  0001 C CNN
+	1    1000 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 5DE9BE68
+P 950 3700
+F 0 "J3" V 822 3880 50  0000 L CNN
+F 1 "Conn_01x03" V 913 3880 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 950 3700 50  0001 C CNN
+F 3 "~" H 950 3700 50  0001 C CNN
+	1    950  3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0108
+U 1 1 5DE86B9F
+P 950 3500
+F 0 "#PWR0108" H 950 3350 50  0001 C CNN
+F 1 "+3.3V" H 965 3673 50  0000 C CNN
+F 2 "" H 950 3500 50  0001 C CNN
+F 3 "" H 950 3500 50  0001 C CNN
+	1    950  3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  3200 850  3200
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5DEB91C4
+P 900 1700
+F 0 "J2" V 864 1512 50  0000 R CNN
+F 1 "Conn_01x03" V 773 1512 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 900 1700 50  0001 C CNN
+F 3 "~" H 900 1700 50  0001 C CNN
+	1    900  1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1000 1900 1000 2150
+Wire Wire Line
+	1000 2150 950  2150
+Wire Wire Line
+	800  1900 800  2150
+Wire Wire Line
+	800  2150 850  2150
+Text GLabel 1850 2750 1    50   Input ~ 0
+Rsensor
+Text GLabel 900  1900 0    50   Input ~ 0
+Rsensor
+$Comp
+L power:GND #PWR0120
+U 1 1 5DEC4054
+P 1050 2150
+F 0 "#PWR0120" H 1050 1900 50  0001 C CNN
+F 1 "GND" V 1055 2022 50  0000 R CNN
+F 2 "" H 1050 2150 50  0001 C CNN
+F 3 "" H 1050 2150 50  0001 C CNN
+	1    1050 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0121
+U 1 1 5DEC4F27
+P 850 2950
+F 0 "#PWR0121" H 850 2800 50  0001 C CNN
+F 1 "+3.3V" H 865 3123 50  0000 C CNN
+F 2 "" H 850 2950 50  0001 C CNN
+F 3 "" H 850 2950 50  0001 C CNN
+	1    850  2950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	950  2950 950  3200
+Wire Wire Line
+	850  3200 850  3500
+Wire Wire Line
+	1050 2950 1050 3500
+Text GLabel 750  2950 0    50   Input ~ 0
+CapTemp
+Text GLabel 8900 2600 0    50   Input ~ 0
+CapTemp
+Text GLabel 10550 2700 2    50   Input ~ 0
+RChauff
+Text GLabel 750  2150 0    50   Input ~ 0
+RChauff
+NoConn ~ 10550 2000
+NoConn ~ 8900 2500
 $EndSCHEMATC
