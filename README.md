@@ -3,7 +3,7 @@ The schematic has been created from a Arduino Uno shield. As a consequence, this
 This board includes a TO-5 package receiving a gas sensor [U4](supplied on the +3V3 output of the Arduino [pin 4]). 
 A conditioner circuit, based on a operational amplifier [U1] (supplied on the +5V output of the Arduino[pin 5]), is included to filter the signal before to be received by the Arduino on a analogInput [A2].
 
-An other analogInpuut [A1] is used for temperature sensor. 
+An other analogInput [A1] is used for temperature sensor. 
 The [pin 3] (output) is connected to the  heat resistor of the sensor. 
 
 Two jumpers [J2 & J3] are used to choose the gas sensor (between the two available on the package [RSense1 & RSense2]) for the input if the conditioner. They have to be on the same position.
