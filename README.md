@@ -2,6 +2,8 @@
 
 This PCB was created using KiCad. The schematic has been created from an Arduino Uno shield template. As a consequence, this board will be easily pluggable on top of an Arduino Uno. This board includes a TO-5 package socket for the gas sensor [U4] (supplied by the +3V3 output of the Arduino [pin 4]).
 
+![Board](https://github.com/Nieflav/kicad_project/blob/master/pictures/board.PNG "Board")
+
 ![PCB 3D View](https://github.com/Nieflav/kicad_project/blob/master/pictures/3D.PNG "3D View")
 
 ## Sensor operation
